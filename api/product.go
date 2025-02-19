@@ -64,6 +64,7 @@ type Item struct {
 	URL                string             `mapstructure:"URL"`
 	URLMobile          string             `mapstructure:"URLsp"`
 	Volume             string             `mapstructure:"volume"`
+	Number             string             `mapstructure:"number"`
 	ImageURL           ImageURLList       `mapstructure:"imageURL"`
 	Tachiyomi          Tachiyomi          `mapstructure:"tachiyomi"`
 	SampleImageURL     SampleImageURLList `mapstructure:"sampleImageURL"`
