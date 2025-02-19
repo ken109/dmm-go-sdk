@@ -65,6 +65,7 @@ type Item struct {
 	URLMobile          string             `mapstructure:"URLsp"`
 	Volume             string             `mapstructure:"volume"`
 	ImageURL           ImageURLList       `mapstructure:"imageURL"`
+	Tachiyomi          Tachiyomi          `mapstructure:"tachiyomi"`
 	SampleImageURL     SampleImageURLList `mapstructure:"sampleImageURL"`
 	SampleMovieURL     SampleMovieURLList `mapstructure:"sampleMovieURL"`
 	Review             ReviewInformation  `mapstructure:"review"`
@@ -78,6 +79,11 @@ type ImageURLList struct {
 	List  string `mapstructure:"list"`
 	Small string `mapstructure:"small"`
 	Large string `mapstructure:"large"`
+}
+
+type Tachiyomi struct {
+	URL          string `mapstructure:"URL"`
+	AffiliateURL string `mapstructure:"affiliateURL"`
 }
 
 type SampleImageURLList struct {
@@ -211,7 +217,8 @@ func (srv *ProductService) SetLength(length int64) *ProductService {
 }
 
 // SetHits set the specified argument to ProductService.Length
-//  SetHits is the alias for SetLength
+//
+//	SetHits is the alias for SetLength
 //
 // SetHitsはLengthパラメータを設定します。
 func (srv *ProductService) SetHits(length int64) *ProductService {
