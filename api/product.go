@@ -82,9 +82,14 @@ type ImageURLList struct {
 
 type SampleImageURLList struct {
 	SampleS SmallSampleList `mapstructure:"sample_s"`
+	SampleL LargeSampleList `mapstructure:"sample_l"`
 }
 
 type SmallSampleList struct {
+	Image []string `mapstructure:"image"`
+}
+
+type LargeSampleList struct {
 	Image []string `mapstructure:"image"`
 }
 
